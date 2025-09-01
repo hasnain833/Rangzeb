@@ -12,7 +12,7 @@
   <body class="bg-[#f8f6f2] scroll-smooth">
     <!-- Header -->
     <header
-      class="sticky top-0 left-0 right-0 z-50 backdrop-blur-2xl max-sm:bg-white">
+      class="sticky top-0 left-0 right-0 z-50 backdrop-blur-2xl max-sm:bg-[#3b3b3b]">
       <div class="container mx-auto px-4">
         <div
           class="flex items-center justify-around h-16 sm:h-18 md:h-20 lg:h-24">
@@ -20,7 +20,7 @@
           <div class="lg:hidden">
             <button
               id="mobileMenuBtn"
-              class="text-gray-600 hover:text-[#79b0a4] transition-colors">
+              class="text-[#8da8a2] hover:text-[#79b0a4] transition-colors">
               <i class="fa fa-bars text-xl"></i>
             </button>
           </div>
@@ -29,7 +29,7 @@
           <div class="flex-1 lg:flex-none flex justify-center lg:justify-start">
             <div class="w-32 sm:w-36 md:w-40 lg:w-44 h-auto cursor-pointer">
               <img
-                src="../images/navlogo.png"
+                src="../images/navlogo1.png"
                 alt="Rangzeb"
                 class="w-full h-auto" />
             </div>
@@ -147,10 +147,14 @@
         class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
       <div
         id="sidebarContent"
-        class="absolute left-0 top-0 h-full w-60 sm:w-80 bg-white shadow-2xl transform -translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto">
+        class="absolute left-0 top-0 h-full w-60 sm:w-80 bg-[#3b3b3b] shadow-2xl transform -translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto">
         <!-- Sidebar Header -->
-        <div class="sticky top-0 text-center border-b border-gray-200">
-          <img src="../images/navlogo.png" alt="Rangzeb" class="w-40 h-auto" />
+        <div
+          class="sticky top-0 w-full flex items-center justify-center border-b border-gray-200">
+          <img
+            src="../images/navlogo1.png"
+            alt="Rangzeb"
+            class="w-30 h-auto" />
         </div>
 
         <!-- Navigation Menu -->
@@ -159,7 +163,7 @@
             <li>
               <a
                 href="../index.html"
-                class="flex items-center gap-3 py-3 px-3 text-gray-700 hover:text-[#8da8a2] hover:bg-gray-50 rounded-lg transition-all duration-200">
+                class="flex items-center gap-3 py-3 px-3 text-white hover:text-[#8da8a2] rounded-lg transition-all duration-200">
                 <i class="fas fa-home text-[#8da8a2] w-5 text-center"></i>
                 <span class="font-medium">Home</span>
               </a>
@@ -168,7 +172,7 @@
             <li class="relative">
               <button
                 id="packagesDropdown"
-                class="flex items-center justify-between w-full py-3 px-3 text-gray-700 hover:text-[#8da8a2] hover:bg-gray-50 rounded-lg transition-all duration-200">
+                class="flex items-center justify-between w-full py-1 px-3 text-white hover:text-[#8da8a2] hover:bg-gray-50 rounded-lg transition-all duration-200">
                 <div class="flex items-center gap-3">
                   <i class="fas fa-box text-[#8da8a2] w-5 text-center"></i>
                   <span class="font-medium">Packages</span>
@@ -181,7 +185,7 @@
                 <li>
                   <a
                     href="weddingpkgs.html"
-                    class="flex items-center gap-3 py-2 px-3 text-gray-600 hover:text-[#8da8a2] hover:bg-gray-50 rounded-lg transition-all duration-200">
+                    class="flex items-center gap-3 py-2 px-3 text-white hover:text-[#8da8a2] hover:bg-gray-50 rounded-lg transition-all duration-200">
                     <i class="fas fa-heart text-[#8da8a2] w-4 text-center"></i>
                     <span class="text-sm">Wedding Packages</span>
                   </a>
@@ -189,24 +193,24 @@
                 <li>
                   <a
                     href="productpkgs.html"
-                    class="flex items-center gap-3 py-2 px-3 text-gray-600 hover:text-[#8da8a2] hover:bg-gray-50 rounded-lg transition-all duration-200">
+                    class="flex items-center gap-3 py-2 px-3 text-white hover:text-[#8da8a2] hover:bg-gray-50 rounded-lg transition-all duration-200">
                     <i class="fas fa-box text-[#8da8a2] w-4 text-center"></i>
                     <span class="text-sm">Product Packages</span>
-                  </a>
-                </li>
+                  </li>
                 <li>
                   <a
                     href="influencerpkgs.html"
-                    class="flex items-center gap-3 py-2 px-3 text-gray-600 hover:text-[#8da8a2] hover:bg-gray-50 rounded-lg transition-all duration-200">
-                    <i class="fas fa-user text-[#8da8a2] w-4 text-center"></i>
+                    class="flex items-center gap-3 py-2 px-3 text-white hover:text-[#8da8a2] hover:bg-gray-50 rounded-lg transition-all duration-200">
+                    <i class="fas fa-user text-[#8da8a2] w-5 text-center"></i>
                     <span class="text-sm">Influencers</span>
                   </a>
                 </li>
                 <li>
                   <a
                     href="socialpkgs.html"
-                    class="flex items-center gap-3 py-2 px-3 text-gray-600 hover:text-[#8da8a2] hover:bg-gray-50 rounded-lg transition-all duration-200">
-                    <i class="fas fa-share-alt text-[#8da8a2] w-4 text-center"></i>
+                    class="flex items-center gap-3 py-2 px-3 text-white hover:text-[#8da8a2] hover:bg-gray-50 rounded-lg transition-all duration-200">
+                    <i
+                      class="fas fa-share-alt text-[#8da8a2] w-4 text-center"></i>
                     <span class="text-sm">Social Media</span>
                   </a>
                 </li>
@@ -215,8 +219,8 @@
 
             <li>
               <a
-                href="/src/pages/about.html"
-                class="flex items-center gap-3 py-3 px-3 text-gray-700 hover:text-[#8da8a2] hover:bg-gray-50 rounded-lg transition-all duration-200">
+                href="about.html"
+                class="flex items-center gap-3 py-3 px-3 text-white hover:text-[#8da8a2] hover:bg-gray-50 rounded-lg transition-all duration-200">
                 <i
                   class="fas fa-info-circle text-[#8da8a2] w-5 text-center"></i>
                 <span class="font-medium">About</span>
@@ -225,15 +229,15 @@
             <li>
               <a
                 href="https://www.behance.net/rangzeb"
-                class="flex items-center gap-3 py-3 px-3 text-gray-700 hover:text-[#8da8a2] hover:bg-gray-50 rounded-lg transition-all duration-200">
+                class="flex items-center gap-3 py-3 px-3 text-white hover:text-[#8da8a2] hover:bg-gray-50 rounded-lg transition-all duration-200">
                 <i class="fas fa-images text-[#8da8a2] w-5 text-center"></i>
                 <span class="font-medium">Portfolio</span>
               </a>
             </li>
             <li>
               <a
-                href="/src/pages/contact.html"
-                class="flex items-center gap-3 py-3 px-3 text-gray-700 hover:text-[#8da8a2] hover:bg-gray-50 rounded-lg transition-all duration-200">
+                href="contact.html"
+                class="flex items-center gap-3 px-3 text-white hover:text-[#8da8a2] hover:bg-gray-50 rounded-lg transition-all duration-200">
                 <i class="fas fa-envelope text-[#8da8a2] w-5 text-center"></i>
                 <span class="font-medium">Contact</span>
               </a>
@@ -243,7 +247,7 @@
 
         <!-- Social Links Section -->
         <div class="px-4 py-6 border-t border-gray-200">
-          <h3 class="text-sm font-semibold text-gray-600 mb-4">Follow Us</h3>
+          <h3 class="text-sm font-semibold text-white mb-4">Follow Us</h3>
           <div class="flex items-center justify-center gap-4">
             <a
               href="https://www.facebook.com/"
@@ -831,6 +835,18 @@
                   class="text-gray-400 hover:text-white text-sm sm:text-base"
                   >Portfolio</a
                 >
+                <a
+                  href="https://www.linkedin.com/company/rangzeb-studio"
+                  target="_blank"
+                  class="text-gray-400 hover:text-white text-sm sm:text-base"
+                  >LinkedIn</a
+                >
+                <a
+                  href="https://x.com/rangzeb_studio"
+                  target="_blank"
+                  class="text-gray-400 hover:text-white text-sm sm:text-base"
+                  >X-(Twitter)</a
+                >
               </div>
 
               <!-- Quick Links -->
@@ -846,28 +862,29 @@
                   </li>
                   <li>
                     <a
-                      href="/src/pages/packages.html"
+                      href="../index.html"
                       class="text-gray-400 hover:text-white text-sm sm:text-base"
-                      >Packages</a
+                      >Home</a
                     >
                   </li>
                   <li>
                     <a
-                      href="/src/pages/about.html"
+                      href="about.html"
                       class="text-gray-400 hover:text-white text-sm sm:text-base"
                       >About</a
                     >
                   </li>
                   <li>
                     <a
-                      href="/src/pages/portfolio.html"
+                      href="https://www.behance.net/rangzeb"
+                      target="_blank"
                       class="text-gray-400 hover:text-white text-sm sm:text-base"
                       >Portfolio</a
                     >
                   </li>
                   <li>
                     <a
-                      href="/src/pages/contact.html"
+                      href="contact.html"
                       class="text-gray-400 hover:text-white text-sm sm:text-base"
                       >Contact</a
                     >

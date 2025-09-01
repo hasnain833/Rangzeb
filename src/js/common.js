@@ -1,5 +1,73 @@
 // Common JavaScript functions for Rangzeb Studio
 
+// Enhanced parallax effect for hero section
+function initHeroParallax() {
+  const parallaxBg = document.querySelector('.parallax');
+  const parallaxImage = document.getElementById('parallaxImage');
+  
+  if (!parallaxBg || !parallaxImage) return;
+
+  let ticking = false;
+  let currentScrollY = 0;
+  let currentMouseX = 0;
+  let currentMouseY = 0;
+  
+  function updateParallax() {
+    const scrollY = window.pageYOffset;
+    currentScrollY = scrollY;
+    
+    const windowHeight = window.innerHeight;
+    const heroSection = document.querySelector('section');
+    
+    if (!heroSection) return;
+    
+    const heroRect = heroSection.getBoundingClientRect();
+    const heroTop = heroRect.top;
+    const heroHeight = heroRect.height;
+    
+    // Only apply parallax when hero section is in view
+    if (heroTop < windowHeight && heroTop + heroHeight > 0) {
+      // Background parallax - slower movement
+      const bgY = scrollY * 0.3;
+      const bgX = currentMouseX * 8;
+      parallaxBg.style.transform = `translate(${bgX}px, ${bgY}px)`;
+      
+      // Image parallax - medium movement
+      const imageY = scrollY * 0.15;
+      const imageX = currentMouseX * 15;
+      const imageMouseY = currentMouseY * 10;
+      const tiltX = currentMouseY * 2;
+      const tiltY = -currentMouseX * 2;
+      
+      parallaxImage.style.transform = `translate(${imageX}px, ${imageY + imageMouseY}px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
+      
+
+    }
+    
+    ticking = false;
+  }
+  
+  function requestTick() {
+    if (!ticking) {
+      requestAnimationFrame(updateParallax);
+      ticking = true;
+    }
+  }
+  
+  // Throttled scroll event for better performance
+  window.addEventListener('scroll', requestTick, { passive: true });
+  
+  // Make functions globally accessible
+  window.requestParallaxUpdate = requestTick;
+  window.initHeroParallax = {
+    currentMouseX: 0,
+    currentMouseY: 0
+  };
+  
+  // Initial call
+  updateParallax();
+}
+
 // Scroll to Top Button Functionality
 function initScrollToTop() {
   const scrollToTopBtn = document.getElementById("scrollToTop");
@@ -30,14 +98,46 @@ function initScrollToTop() {
   });
 }
 
-// Simple parallax effect for the image
-window.addEventListener("scroll", function () {
-  const scrollY = window.scrollY;
-  const parallaxImage = document.getElementById("parallaxImage");
+// Enhanced mouse movement parallax effect
+function handleMouseMove(e) {
+  const parallaxBg = document.querySelector('.parallax');
+  const parallaxImage = document.getElementById('parallaxImage');
+  
+  if (!parallaxBg || !parallaxImage) return;
+  
+  const heroSection = document.querySelector('section');
+  if (!heroSection) return;
+  
+  const heroRect = heroSection.getBoundingClientRect();
+  const heroTop = heroRect.top;
+  const heroHeight = heroRect.height;
+  
+  // Only apply mouse parallax when hero section is in view
+  if (heroTop < window.innerHeight && heroTop + heroHeight > 0) {
+    const mouseX = e.clientX;
+    const mouseY = e.clientY;
+    const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
+    
+    // Calculate mouse position relative to center (0 to 1)
+    const mouseXPercent = (mouseX - windowWidth / 2) / (windowWidth / 2);
+    const mouseYPercent = (mouseY - windowHeight / 2) / (windowHeight / 2);
+    
+    // Update stored mouse values for the parallax function
+    if (window.initHeroParallax && window.initHeroParallax.currentMouseX !== undefined) {
+      window.initHeroParallax.currentMouseX = mouseXPercent;
+      window.initHeroParallax.currentMouseY = mouseYPercent;
+    }
+    
+    // Trigger parallax update
+    if (window.requestParallaxUpdate) {
+      window.requestParallaxUpdate();
+    }
+  }
+}
 
-  // Move image slightly slower than scroll
-  parallaxImage.style.transform = `translateY(${scrollY * 0.1}px)`;
-});
+// Add mouse movement event listener
+window.addEventListener('mousemove', handleMouseMove, { passive: true });
 
 function initMobileSidebar() {
   const mobileMenuBtn = document.getElementById("mobileMenuBtn");
@@ -206,6 +306,7 @@ document.addEventListener("DOMContentLoaded", function () {
   initSocialDropdown();
   initSmoothScrolling();
   initNewsletterForm();
+  initHeroParallax(); // Initialize the new parallax effect
 
   console.log("Rangzeb Studio - Common JavaScript loaded successfully");
 });
