@@ -1,0 +1,193 @@
+<!-- Wedding Packages -->
+    <section class="py-20 px-4">
+      <div class="container mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold mb-4">Wedding Packages</h2>
+          <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+            Capture your special day with our comprehensive wedding photography
+            packages
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-3">
+          <!-- Pearl Package -->
+          <div
+            class="p-8 rounded-3xl shadow-xs transition-all duration-300 ease-in-out flex flex-col h-full group">
+            <div class="flex flex-col items-center text-center mb-8">
+              <div
+                class="sm:w-20 sm:h-20 md:w-40 md:h-40 blob2 flex items-center justify-center bg-[#ebeae9] transition-all duration-600 group-hover:bg-[#8da8a2]">
+                <i
+                  class="fas fa-circle text-[#8da8a2] sm:text-xl md:text-4xl transition-colors duration-300 group-hover:text-white"></i>
+              </div>
+              <h3 class="text-2xl font-bold mb-4">Pearl</h3>
+              <div class="text-3xl font-bold text-[#8da8a2] mb-2">
+                Rs. 10,000 – 12,000
+              </div>
+              <p class="text-gray-600">Custom Package</p>
+            </div>
+
+            <ul class="space-y-4 mb-8 flex-grow">
+              <li class="flex items-center">
+                <i class="fas fa-check text-[#8da8a2] mr-3"></i>
+                <span>Custom Coverage</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-[#8da8a2] mr-3"></i>
+                <span>Flexible Hours</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-[#8da8a2] mr-3"></i>
+                <span>Edited Photos</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-[#8da8a2] mr-3"></i>
+                <span>Online Gallery</span>
+              </li>
+            </ul>
+
+            <button
+              class="w-full bg-[#8da8a2] text-white py-3 px-6 rounded-xl font-semibold hover:bg-[#79b0a4] transition-colors mt-auto cursor-pointer">
+              <a href="/src/pages/contact.html">Book Now</a>
+            </button>
+          </div>
+
+          <!-- Sapphire Package -->
+          <div
+            class="p-8 rounded-3xl shadow-xs hover:border-[#8da8a2] transition-all duration-600 ease-in-out flex flex-col h-full group">
+            <div class="flex flex-col items-center text-center mb-8">
+              <div
+                class="sm:w-20 sm:h-20 md:w-40 md:h-40 blob2 flex items-center justify-center bg-[#ebeae9] transition-all duration-300 group-hover:bg-[#8da8a2]">
+                <i
+                  class="fas fa-gem text-[#8da8a2] sm:text-xl md:text-4xl transition-colors duration-300 group-hover:text-white"></i>
+              </div>
+              <h3 class="text-2xl font-bold mb-4">Sapphire</h3>
+              <div class="text-3xl font-bold text-[#8da8a2] mb-2">
+                Rs. 20,000 – 55,000
+              </div>
+              <p class="text-gray-600">Essential Coverage</p>
+            </div>
+
+            <ul class="space-y-4 mb-8 flex-grow">
+              <li class="flex items-center">
+                <i class="fas fa-check text-[#8da8a2] mr-3"></i>
+                <span>6-8 Hours Coverage</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-[#8da8a2] mr-3"></i>
+                <span>200+ Edited Photos</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-[#8da8a2] mr-3"></i>
+                <span>Online Gallery</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-[#8da8a2] mr-3"></i>
+                <span>Basic Retouching</span>
+              </li>
+            </ul>
+
+            <button
+              class="w-full bg-[#8da8a2] text-white py-3 px-6 rounded-xl font-semibold hover:bg-[#79b0a4] transition-colors mt-auto cursor-pointer">
+              <a href="/src/pages/contact.html">Book Now</a>
+            </button>
+          </div>
+
+          <!-- Emerald Package -->
+          <div
+            class="relative flex flex-col h-full group p-8 border-1 border-[#8da8a2] rounded-3xl transition-all duration-500 ease-in-out shadow-xs">
+            <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+              <span
+                class="bg-[#79b0a4] text-white px-4 py-2 rounded-full text-sm font-semibold"
+                >Most Popular</span
+              >
+            </div>
+
+            <div class="flex flex-col items-center text-center mb-8">
+              <div
+                class="sm:w-20 sm:h-20 md:w-40 md:h-40 blob2 flex items-center justify-center group-hover:bg-[#8da8a2] bg-[#ebeae9] transition-all duration-600">
+                <i
+                  class="fas fa-leaf group-hover:text-white text-[#8da8a2] sm:text-xl md:text-4xl transition-colors duration-300"></i>
+              </div>
+              <h3 class="text-2xl font-bold mb-4">Emerald</h3>
+              <div class="text-3xl text-[#8da8a2] font-bold mb-2">
+                Rs. 35,000 – 100,000
+              </div>
+              <p class="text-gray-600">Complete Coverage</p>
+            </div>
+
+            <ul class="space-y-4 mb-8 flex-grow">
+              <li class="flex items-center">
+                <i class="fas fa-check mr-3"></i>
+                <span>Full Day Coverage</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check mr-3"></i>
+                <span>400+ Edited Photos</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check mr-3"></i>
+                <span>5-Minute Highlight Video</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check mr-3"></i>
+                <span>Engagement Session</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check mr-3"></i>
+                <span>Premium Album</span>
+              </li>
+            </ul>
+
+            <button
+              class="w-full bg-[#8da8a2] text-white py-3 px-6 rounded-xl font-semibold hover:bg-[#79b0a4] transition-colors mt-auto cursor-pointer">
+              <a href="/src/pages/contact.html">Book Now</a>
+            </button>
+          </div>
+
+          <!-- Ruby Package -->
+          <div
+            class="p-8 rounded-3xl shadow-xs transition-all duration-300 ease-in-out flex flex-col h-full group">
+            <div class="flex flex-col items-center text-center mb-8">
+              <div
+                class="sm:w-20 sm:h-20 md:w-40 md:h-40 blob2 flex items-center justify-center bg-[#ebeae9] transition-all duration-600 group-hover:bg-[#8da8a2]">
+                <i
+                  class="fas fa-diamond text-[#8da8a2] sm:text-xl md:text-4xl transition-colors duration-300 group-hover:text-white"></i>
+              </div>
+              <h3 class="text-2xl font-bold mb-4">Ruby</h3>
+              <div class="text-3xl font-bold text-[#8da8a2] mb-2">
+                Rs. 72,000 – 205,000
+              </div>
+              <p class="text-gray-600">Luxury Experience</p>
+            </div>
+
+            <ul class="space-y-4 mb-8 flex-grow">
+              <li class="flex items-center">
+                <i class="fas fa-check text-[#8da8a2] mr-3"></i>
+                <span>Multi-Day Coverage</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-[#8da8a2] mr-3"></i>
+                <span>600+ Edited Photos</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-[#8da8a2] mr-3"></i>
+                <span>15-Minute Cinematic Film</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-[#8da8a2] mr-3"></i>
+                <span>Drone Coverage</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-[#8da8a2] mr-3"></i>
+                <span>Pre & Post Events</span>
+              </li>
+            </ul>
+
+            <button
+              class="w-full bg-[#8da8a2] text-white py-3 px-6 rounded-xl font-semibold hover:bg-[#79b0a4] transition-colors mt-auto cursor-pointer">
+              <a href="/src/pages/contact.html">Book Now</a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>

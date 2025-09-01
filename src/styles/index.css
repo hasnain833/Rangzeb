@@ -1,0 +1,114 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+
+
+
+/* Force arrows to be outside and visible */
+.glide__arrow {
+  position: absolute !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.glide__arrow--left {
+  left: -60px !important;
+}
+
+.glide__arrow--right {
+  right: -60px !important;
+}
+
+:root {
+  --font-dm: "DM Sans", sans-serif;
+  --font-playfair: "Playfair Display", serif;
+}
+
+.font-playfair {
+  font-family: "Playfair Display", serif;
+}
+
+.font-dm {
+  font-family: "DM Sans", sans-serif;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", serif;
+}
+
+.clip-shape {
+  clip-path: inset(0 0 0 40% round 20px);
+}
+
+.blob {
+  aspect-ratio: 1;
+  clip-path: shape(
+    from 14.67% 19.93%,
+    curve to 22.31% 13.01% with 19.06% 17.05%,
+    curve to 30.09% 6.33% with 25.55% 8.96%,
+    curve to 40.06% 5.25% with 34.62% 3.7%,
+    curve to 50.31% 5.75% with 45.49% 6.79%,
+    curve to 60.27% 4.81% with 55.12% 4.7%,
+    curve to 70.59% 6.25% with 65.41% 4.92%,
+    curve to 77.86% 13.13% with 75.77% 7.59%,
+    curve to 85.62% 20.46% with 79.95% 18.66%,
+    curve to 92.36% 27.59% with 91.3% 22.26%,
+    curve to 92.73% 38.11% with 93.42% 32.92%,
+    curve to 92.98% 47.93% with 92.03% 43.3%,
+    curve to 93.58% 57.39% with 93.93% 52.57%,
+    curve to 92.31% 67.19% with 93.24% 62.21%,
+    curve to 88.54% 76.38% with 91.39% 72.17%,
+    curve to 81.16% 82.97% with 85.7% 80.59%,
+    curve to 72.88% 88.59% with 76.63% 85.35%,
+    curve to 64.72% 94.82% with 69.13% 91.83%,
+    curve to 55.05% 97.69% with 60.31% 97.81%,
+    curve to 44.97% 95.7% with 49.79% 97.57%,
+    curve to 35.87% 91.59% with 40.15% 93.84%,
+    curve to 27.96% 86.4% with 31.6% 89.33%,
+    curve to 19.15% 81.91% with 24.33% 83.47%,
+    curve to 9.95% 76.73% with 13.97% 80.34%,
+    curve to 6.51% 67.42% with 5.93% 73.12%,
+    curve to 4.39% 57.06% with 7.09% 61.71%,
+    curve to 3.31% 47.41% with 1.69% 52.41%,
+    curve to 7.04% 37.96% with 4.94% 42.41%,
+    curve to 9.71% 28.16% with 9.14% 33.51%,
+    curve to 14.67% 19.93% with 10.28% 22.82%
+  );
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #8da8a2;
+  backdrop-filter: blur(6px);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f8f6f2;
+  border-radius: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.blob2 {
+  aspect-ratio: 1;
+  clip-path: shape(
+    from 68.65% 70.35%,
+    curve to 27.16% 70.35% with 50% 90.69%,
+    curve to 27.16% 26.18% with 4.32% 50%,
+    curve to 68.65% 26.18% with 50% 2.36%,
+    curve to 68.65% 70.35% with 87.29% 50%
+  );
+}
