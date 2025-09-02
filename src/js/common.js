@@ -208,11 +208,25 @@ function initMobileSidebar() {
     packagesDropdown.addEventListener("click", (e) => {
       e.stopPropagation(); // keep sidebar open
       const willOpen = packagesMenu.classList.contains("hidden");
-      packagesMenu.classList.toggle("hidden");
-      if (packagesArrow) {
-        packagesArrow.style.transform = willOpen
-          ? "rotate(180deg)"
-          : "rotate(0deg)";
+      
+      if (willOpen) {
+        // Opening the dropdown
+        packagesMenu.classList.remove("hidden");
+        packagesMenu.classList.remove("opacity-0", "max-h-0");
+        packagesMenu.classList.add("opacity-100", "max-h-96");
+        if (packagesArrow) {
+          packagesArrow.style.transform = "rotate(180deg)";
+        }
+      } else {
+        // Closing the dropdown
+        packagesMenu.classList.remove("opacity-100", "max-h-96");
+        packagesMenu.classList.add("opacity-0", "max-h-0");
+        setTimeout(() => {
+          packagesMenu.classList.add("hidden");
+        }, 300);
+        if (packagesArrow) {
+          packagesArrow.style.transform = "rotate(0deg)";
+        }
       }
     });
   }
