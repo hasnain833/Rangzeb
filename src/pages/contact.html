@@ -14,13 +14,15 @@
   </head>
   <body class="bg-[#f8f6f2] scroll-smooth">
     <!-- Header -->
-    <header class="sticky top-0 left-0 right-0 z-50 backdrop-blur-2xl max-sm:bg-[#3b3b3b] max-md:bg-[#3b3b3b]">
+    <header
+      class="sticky top-0 left-0 right-0 z-50 backdrop-blur-2xl max-sm:bg-[#3b3b3b] max-md:bg-[#3b3b3b]">
       <div class="container mx-auto max-sm:px-5 max-md:px-10">
         <div
           class="flex items-center justify-around h-16 sm:h-18 md:h-20 lg:h-24">
           <!-- Mobile Menu Button -->
           <div class="lg:hidden">
             <button
+              id="mobileMenuBtn"
               class="text-[#8da8a2] hover:text-[#79b0a4] transition-colors">
               <i class="fa fa-bars text-xl"></i>
             </button>
@@ -29,10 +31,12 @@
           <!-- Logo -->
           <div class="flex-1 lg:flex-none flex justify-center lg:justify-start">
             <div class="w-32 sm:w-36 md:w-40 lg:w-44 h-auto cursor-pointer">
-              <img
-                src="../images/navlogo1.png"
-                alt="Rangzeb"
-                class="w-full h-auto" />
+              <a href="index.html">
+                <img
+                  src="../images/navlogo1.png"
+                  alt="Rangzeb"
+                  class="w-full h-auto"
+              /></a>
             </div>
           </div>
 
@@ -152,10 +156,7 @@
         <!-- Sidebar Header -->
         <div
           class="sticky top-0 w-full flex items-center justify-center border-b border-gray-200">
-          <img
-            src="../images/navlogo1.png"
-            alt="Rangzeb"
-            class="w-30 h-auto" />
+          <img src="../images/navlogo1.png" alt="Rangzeb" class="w-30 h-auto" />
         </div>
 
         <!-- Navigation Menu -->
@@ -173,7 +174,7 @@
             <li class="relative">
               <button
                 id="packagesDropdown"
-                class="flex items-center justify-between w-full py-3 px-3 text-gray-700 hover:text-[#8da8a2] hover:bg-gray-50 rounded-lg transition-all duration-200">
+                class="flex items-center justify-between w-full py-1 px-3 text-white hover:text-[#8da8a2] hover:bg-gray-50 rounded-lg transition-all duration-200">
                 <div class="flex items-center gap-3">
                   <i class="fas fa-box text-[#8da8a2] w-5 text-center"></i>
                   <span class="font-medium">Packages</span>
@@ -185,32 +186,32 @@
               <ul id="packagesMenu" class="hidden pl-8 mt-2 space-y-1">
                 <li>
                   <a
-                    href="src/pages/weddingpkgs.html"
-                    class="flex items-center gap-3 py-2 px-3 text-gray-600 hover:text-[#8da8a2] hover:bg-gray-50 rounded-lg transition-all duration-200">
+                    href="weddingpkgs.html"
+                    class="flex items-center gap-3 py-2 px-3 text-white hover:text-[#8da8a2] hover:bg-gray-50 rounded-lg transition-all duration-200">
                     <i class="fas fa-heart text-[#8da8a2] w-4 text-center"></i>
                     <span class="text-sm">Wedding Packages</span>
                   </a>
                 </li>
                 <li>
                   <a
-                    href="src/pages/productpkgs.html"
-                    class="flex items-center gap-3 py-2 px-3 text-gray-600 hover:text-[#8da8a2] hover:bg-gray-50 rounded-lg transition-all duration-200">
+                    href="productpkgs.html"
+                    class="flex items-center gap-3 py-2 px-3 text-white hover:text-[#8da8a2] hover:bg-gray-50 rounded-lg transition-all duration-200">
                     <i class="fas fa-box text-[#8da8a2] w-4 text-center"></i>
                     <span class="text-sm">Product Packages</span>
                   </a>
                 </li>
                 <li>
                   <a
-                    href="src/pages/influencerpkgs.html"
-                    class="flex items-center gap-3 py-2 px-3 text-gray-600 hover:text-[#8da8a2] hover:bg-gray-50 rounded-lg transition-all duration-200">
+                    href="influencerpkgs.html"
+                    class="flex items-center gap-3 py-2 px-3 text-white hover:text-[#8da8a2] hover:bg-gray-50 rounded-lg transition-all duration-200">
                     <i class="fas fa-user text-[#8da8a2] w-4 text-center"></i>
                     <span class="text-sm">Influencers</span>
                   </a>
                 </li>
                 <li>
                   <a
-                    href="src/pages/socialpkgs.html"
-                    class="flex items-center gap-3 py-2 px-3 text-gray-600 hover:text-[#8da8a2] hover:bg-gray-50 rounded-lg transition-all duration-200">
+                    href="socialpkgs.html"
+                    class="flex items-center gap-3 py-2 px-3 text-white hover:text-[#8da8a2] hover:bg-gray-50 rounded-lg transition-all duration-200">
                     <i
                       class="fas fa-share-alt text-[#8da8a2] w-4 text-center"></i>
                     <span class="text-sm">Social Media</span>
@@ -221,8 +222,8 @@
 
             <li>
               <a
-                href="/src/pages/about.html"
-                class="flex items-center gap-3 py-3 px-3 text-gray-700 hover:text-[#8da8a2] hover:bg-gray-50 rounded-lg transition-all duration-200">
+                href="about.html"
+                class="flex items-center gap-3 py-3 px-3 text-white hover:text-[#8da8a2] hover:bg-gray-50 rounded-lg transition-all duration-200">
                 <i
                   class="fas fa-info-circle text-[#8da8a2] w-5 text-center"></i>
                 <span class="font-medium">About</span>
@@ -231,15 +232,15 @@
             <li>
               <a
                 href="https://www.behance.net/rangzeb"
-                class="flex items-center gap-3 py-3 px-3 text-gray-700 hover:text-[#8da8a2] hover:bg-gray-50 rounded-lg transition-all duration-200">
+                class="flex items-center gap-3 py-3 px-3 text-white hover:text-[#8da8a2] hover:bg-gray-50 rounded-lg transition-all duration-200">
                 <i class="fas fa-images text-[#8da8a2] w-5 text-center"></i>
                 <span class="font-medium">Portfolio</span>
               </a>
             </li>
             <li>
               <a
-                href="/src/pages/contact.html"
-                class="flex items-center gap-3 py-3 px-3 text-gray-700 hover:text-[#8da8a2] hover:bg-gray-50 rounded-lg transition-all duration-200">
+                href="contact.html"
+                class="flex items-center gap-3 py-3 px-3 text-white hover:text-[#8da8a2] hover:bg-gray-50 rounded-lg transition-all duration-200">
                 <i class="fas fa-envelope text-[#8da8a2] w-5 text-center"></i>
                 <span class="font-medium">Contact</span>
               </a>
