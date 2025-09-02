@@ -12,8 +12,8 @@
   <body class="bg-[#f8f6f2] scroll-smooth">
     <!-- Header -->
     <header
-      class="sticky top-0 left-0 right-0 z-50 backdrop-blur-2xl max-sm:bg-[#3b3b3b]">
-      <div class="container mx-auto px-4">
+      class="sticky top-0 left-0 right-0 z-50 backdrop-blur-2xl max-sm:bg-[#3b3b3b] max-md:bg-[#3b3b3b]">
+      <div class="container mx-auto max-sm:px-5 max-md:px-10 max-lg:px-10">
         <div
           class="flex items-center justify-around h-16 sm:h-18 md:h-20 lg:h-24">
           <!-- Mobile Menu Button -->
@@ -112,15 +112,15 @@
 
           <!-- CTA Buttons -->
           <div
-            class="max-sm:hidden max-lg:block md:flex items-center gap-2 sm:gap-3 max-md:gap-4 max-lg:gap-6">
+            class="max-sm:hidden max-lg:block max-md:flex flex items-center gap-3 max-md:gap-3 max-lg:gap-6">
             <button
-              class="text-gray-600 hover:text-[#1877F2] cursor-pointer transition-colors">
+              class="text-[#8da8a2] hover:text-[#1877F2] cursor-pointer transition-colors">
               <a href="https://www.facebook.com/" target="_blank"
                 ><i class="fab fa-facebook-f text-base sm:text-lg"></i
               ></a>
             </button>
             <button
-              class="text-gray-600 hover:text-[#25D366] cursor-pointer transition-colors">
+              class="text-[#8da8a2] hover:text-[#25D366] cursor-pointer transition-colors">
               <a
                 href="https://api.whatsapp.com/send/?phone=923305384384&text&type=phone_number&app_absent=0"
                 target="_blank"
@@ -128,7 +128,7 @@
               ></a>
             </button>
             <button
-              class="text-gray-600 hover:text-[#E4405F] cursor-pointer transition-colors">
+              class="text-[#8da8a2] hover:text-[#E4405F] cursor-pointer transition-colors">
               <a
                 href="https://www.instagram.com/rangzeb_studio/"
                 target="_blank"
@@ -151,10 +151,7 @@
         <!-- Sidebar Header -->
         <div
           class="sticky top-0 w-full flex items-center justify-center border-b border-gray-200">
-          <img
-            src="../images/navlogo1.png"
-            alt="Rangzeb"
-            class="w-30 h-auto" />
+          <img src="../images/navlogo1.png" alt="Rangzeb" class="w-30 h-auto" />
         </div>
 
         <!-- Navigation Menu -->
@@ -195,8 +192,9 @@
                     href="productpkgs.html"
                     class="flex items-center gap-3 py-2 px-3 text-white hover:text-[#8da8a2] hover:bg-gray-50 rounded-lg transition-all duration-200">
                     <i class="fas fa-box text-[#8da8a2] w-4 text-center"></i>
-                    <span class="text-sm">Product Packages</span>
-                  </li>
+                    <span class="text-sm">Product Packages</span></a
+                  >
+                </li>
                 <li>
                   <a
                     href="influencerpkgs.html"
@@ -924,11 +922,11 @@
       style="display: none">
       <i class="fas fa-arrow-up text-sm sm:text-base"></i>
     </button>
-    
+
     <script src="../js/common.js"></script>
     <script>
       // Initialize all common functionality
-      document.addEventListener('DOMContentLoaded', function() {
+      document.addEventListener("DOMContentLoaded", function () {
         initScrollToTop();
         initMobileSidebar();
       });

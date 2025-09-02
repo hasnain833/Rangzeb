@@ -13,8 +13,8 @@
   <body class="bg-[#f8f6f2] scroll-smooth">
     <!-- Header -->
     <header
-      class="sticky top-0 left-0 right-0 z-50 backdrop-blur-2xl max-sm:bg-[#3b3b3b]">
-      <div class="container mx-auto px-4">
+      class="sticky top-0 left-0 right-0 z-50 backdrop-blur-2xl max-sm:bg-[#3b3b3b] max-md:bg-[#3b3b3b]">
+      <div class="container mx-auto px-10 max-sm:px-5 max-md:px-10 max-lg:px-10">
         <div
           class="flex items-center justify-around h-16 sm:h-18 md:h-20 lg:h-24">
           <!-- Mobile Menu Button -->
@@ -113,15 +113,15 @@
 
           <!-- CTA Buttons -->
           <div
-            class="max-sm:hidden max-lg:block md:flex items-center gap-2 sm:gap-3 max-md:gap-4 max-lg:gap-6">
+            class="max-sm:hidden max-lg:flex max-md:flex flex items-center gap-3 max-md:gap-3 max-lg:gap-3">
             <button
-              class="text-gray-600 hover:text-[#1877F2] cursor-pointer transition-colors">
+              class="text-[#8da8a2] hover:text-[#1877F2] cursor-pointer transition-colors">
               <a href="https://www.facebook.com/" target="_blank"
                 ><i class="fab fa-facebook-f text-base sm:text-lg"></i
               ></a>
             </button>
             <button
-              class="text-gray-600 hover:text-[#25D366] cursor-pointer transition-colors">
+              class="text-[#8da8a2] hover:text-[#25D366] cursor-pointer transition-colors">
               <a
                 href="https://api.whatsapp.com/send/?phone=923305384384&text&type=phone_number&app_absent=0"
                 target="_blank"
@@ -129,7 +129,7 @@
               ></a>
             </button>
             <button
-              class="text-gray-600 hover:text-[#E4405F] cursor-pointer transition-colors">
+              class="text-[#8da8a2] hover:text-[#E4405F] cursor-pointer transition-colors">
               <a
                 href="https://www.instagram.com/rangzeb_studio/"
                 target="_blank"
@@ -152,10 +152,7 @@
         <!-- Sidebar Header -->
         <div
           class="sticky top-0 w-full flex items-center justify-center border-b border-gray-200">
-          <img
-            src="../images/navlogo1.png"
-            alt="Rangzeb"
-            class="w-30 h-auto" />
+          <img src="../images/navlogo1.png" alt="Rangzeb" class="w-30 h-auto" />
         </div>
 
         <!-- Navigation Menu -->
@@ -911,8 +908,7 @@
       class="bg-[#3b3b3b] text-white pt-12 sm:pt-16 md:pt-20 pb-8 sm:pb-10 px-4 sm:px-8 md:px-15">
       <div class="container mx-auto">
         <div class="flex flex-col justify-around gap-6 sm:gap-8">
-          <div
-            class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+          <div class="flex flex-col lg:flex-row lg:justify-between">
             <div class="flex items-center gap-2 mb-4 sm:mb-6">
               <img
                 class="w-20 sm:w-25"
@@ -930,17 +926,20 @@
           </div>
 
           <div
-            class="flex flex-col lg:flex-row lg:justify-between gap-6 sm:gap-8 lg:gap-10">
+            class="flex flex-col lg:flex-row gap-8 sm:gap-10 lg:gap-15 lg:justify-between">
             <div>
-              <p class="text-sm sm:text-md text-[#8da8a2]">NEWSLETTER</p>
-              <div class="flex items-center border-b-1 border-[#8da8a2] gap-2">
+              <p class="text-sm sm:text-base text-[#8da8a2] mb-2 sm:mb-3">
+                NEWSLETTER
+              </p>
+              <div
+                class="flex items-center w-full border-b border-[#8da8a2] gap-2">
                 <i
                   class="fas fa-envelope text-lg sm:text-xl text-[#8da8a2]"></i>
                 <input
                   type="email"
                   required
                   placeholder="you@example.com"
-                  class="w-full sm:w-100 px-0 py-3 sm:py-4 text-sm outline-none" />
+                  class="w-full py-3 sm:py-4 text-sm outline-none bg-transparent text-white" />
                 <i
                   class="fas fa-arrow-right text-lg sm:text-xl cursor-pointer hover:text-white text-[#8da8a2]"></i>
               </div>
@@ -957,7 +956,7 @@
             </div>
 
             <div
-              class="flex flex-col sm:flex-row gap-6 sm:gap-8 lg:gap-10 items-start">
+              class="flex md:flex-row flex-col gap-6 sm:gap-10 lg:gap-6 items-start justify-between">
               <!-- Social Links  -->
               <div class="flex flex-col gap-4">
                 <h3 class="text-md font-bold">Social Links</h3>
@@ -1006,9 +1005,7 @@
                     >
                   </li>
                   <li>
-                    <a
-                      href="about.html"
-                      class="text-gray-400 hover:text-white"
+                    <a href="about.html" class="text-gray-400 hover:text-white"
                       >About</a
                     >
                   </li>

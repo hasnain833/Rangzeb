@@ -1,69 +1,91 @@
 // Common JavaScript functions for Rangzeb Studio
 
+window.addEventListener("scroll", () => {
+  const scrollY = window.scrollY;
+
+  // existing top parallax background
+  const parallax = document.querySelector(".parallax");
+  if (parallax) {
+    parallax.style.transform = `translateY(${scrollY * 0.3}px)`;
+  }
+
+  // existing hero image
+  const parallaxImage = document.getElementById("parallaxImage");
+  if (parallaxImage) {
+    parallaxImage.style.transform = `translateY(${scrollY * 0.15}px)`;
+  }
+
+  // new bottom div parallax
+  const bottomParallax = document.getElementById("bottomParallax");
+  if (bottomParallax) {
+    bottomParallax.style.transform = `translateY(${scrollY * -0.2}px)`;
+  }
+});
+
 // Enhanced parallax effect for hero section
 function initHeroParallax() {
-  const parallaxBg = document.querySelector('.parallax');
-  const parallaxImage = document.getElementById('parallaxImage');
-  
+  const parallaxBg = document.querySelector(".parallax");
+  const parallaxImage = document.getElementById("parallaxImage");
+
   if (!parallaxBg || !parallaxImage) return;
 
   let ticking = false;
   let currentScrollY = 0;
   let currentMouseX = 0;
   let currentMouseY = 0;
-  
+
   function updateParallax() {
     const scrollY = window.pageYOffset;
     currentScrollY = scrollY;
-    
+
     const windowHeight = window.innerHeight;
-    const heroSection = document.querySelector('section');
-    
+    const heroSection = document.querySelector("section");
+
     if (!heroSection) return;
-    
+
     const heroRect = heroSection.getBoundingClientRect();
     const heroTop = heroRect.top;
     const heroHeight = heroRect.height;
-    
+
     // Only apply parallax when hero section is in view
     if (heroTop < windowHeight && heroTop + heroHeight > 0) {
       // Background parallax - slower movement
       const bgY = scrollY * 0.3;
       const bgX = currentMouseX * 8;
       parallaxBg.style.transform = `translate(${bgX}px, ${bgY}px)`;
-      
+
       // Image parallax - medium movement
       const imageY = scrollY * 0.15;
       const imageX = currentMouseX * 15;
       const imageMouseY = currentMouseY * 10;
       const tiltX = currentMouseY * 2;
       const tiltY = -currentMouseX * 2;
-      
-      parallaxImage.style.transform = `translate(${imageX}px, ${imageY + imageMouseY}px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
-      
 
+      parallaxImage.style.transform = `translate(${imageX}px, ${
+        imageY + imageMouseY
+      }px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
     }
-    
+
     ticking = false;
   }
-  
+
   function requestTick() {
     if (!ticking) {
       requestAnimationFrame(updateParallax);
       ticking = true;
     }
   }
-  
+
   // Throttled scroll event for better performance
-  window.addEventListener('scroll', requestTick, { passive: true });
-  
+  window.addEventListener("scroll", requestTick, { passive: true });
+
   // Make functions globally accessible
   window.requestParallaxUpdate = requestTick;
   window.initHeroParallax = {
     currentMouseX: 0,
-    currentMouseY: 0
+    currentMouseY: 0,
   };
-  
+
   // Initial call
   updateParallax();
 }
@@ -100,35 +122,38 @@ function initScrollToTop() {
 
 // Enhanced mouse movement parallax effect
 function handleMouseMove(e) {
-  const parallaxBg = document.querySelector('.parallax');
-  const parallaxImage = document.getElementById('parallaxImage');
-  
+  const parallaxBg = document.querySelector(".parallax");
+  const parallaxImage = document.getElementById("parallaxImage");
+
   if (!parallaxBg || !parallaxImage) return;
-  
-  const heroSection = document.querySelector('section');
+
+  const heroSection = document.querySelector("section");
   if (!heroSection) return;
-  
+
   const heroRect = heroSection.getBoundingClientRect();
   const heroTop = heroRect.top;
   const heroHeight = heroRect.height;
-  
+
   // Only apply mouse parallax when hero section is in view
   if (heroTop < window.innerHeight && heroTop + heroHeight > 0) {
     const mouseX = e.clientX;
     const mouseY = e.clientY;
     const windowWidth = window.innerWidth;
     const windowHeight = window.innerHeight;
-    
+
     // Calculate mouse position relative to center (0 to 1)
     const mouseXPercent = (mouseX - windowWidth / 2) / (windowWidth / 2);
     const mouseYPercent = (mouseY - windowHeight / 2) / (windowHeight / 2);
-    
+
     // Update stored mouse values for the parallax function
-    if (window.initHeroParallax && window.initHeroParallax.currentMouseX !== undefined) {
+    if (
+      window.initHeroParallax &&
+      window.initHeroParallax.currentMouseX !== undefined
+    ) {
       window.initHeroParallax.currentMouseX = mouseXPercent;
       window.initHeroParallax.currentMouseY = mouseYPercent;
     }
-    
+
     // Trigger parallax update
     if (window.requestParallaxUpdate) {
       window.requestParallaxUpdate();
@@ -137,7 +162,7 @@ function handleMouseMove(e) {
 }
 
 // Add mouse movement event listener
-window.addEventListener('mousemove', handleMouseMove, { passive: true });
+window.addEventListener("mousemove", handleMouseMove, { passive: true });
 
 function initMobileSidebar() {
   const mobileMenuBtn = document.getElementById("mobileMenuBtn");

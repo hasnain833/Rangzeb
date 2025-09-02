@@ -15,58 +15,13 @@
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css" />
-    <style>
-      .parallax {
-        background-image: url("/src/images/hero-bg.png");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: absolute;
-        inset: 0;
-        z-index: 1;
-        will-change: transform;
-      }
-      
-
-      
-      #parallaxImage {
-        will-change: transform;
-        transition: transform 0.1s ease-out;
-      }
-      
-      /* Smooth parallax animation */
-      .parallax, #parallaxImage {
-        backface-visibility: hidden;
-        transform-style: preserve-3d;
-      }
-      
-      /* Enhanced depth effect */
-      .parallax {
-        filter: brightness(1.1) contrast(1.05);
-        box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.1);
-      }
-      
-      /* Add subtle depth to hero section */
-      section {
-        position: relative;
-        overflow: hidden;
-      }
-      
-      /* Smooth transitions for all parallax elements */
-      .parallax, #parallaxImage {
-        transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-      }
-      
-
-      
-
-    </style>
   </head>
+
   <body class="bg-[#f8f6f2] scroll-smooth">
     <!-- Header -->
     <header
-      class="sticky top-0 left-0 right-0 z-50 backdrop-blur-2xl max-sm:bg-[#3b3b3b]">
-      <div class="container mx-auto px-4">
+      class="sticky top-0 left-0 right-0 z-50 backdrop-blur-2xl max-sm:bg-[#3b3b3b] max-md:bg-[#3b3b3b]">
+      <div class="container mx-auto max-sm:px-5 max-md:px-10 max-lg:px-10">
         <div
           class="flex items-center justify-around h-16 sm:h-18 md:h-20 lg:h-24">
           <!-- Mobile Menu Button -->
@@ -165,7 +120,7 @@
 
           <!-- CTA Buttons -->
           <div
-            class="max-sm:hidden max-lg:block md:flex items-center gap-2 sm:gap-3 max-md:gap-4 max-lg:gap-6">
+            class="max-sm:hidden max-lg:flex max-md:flex flex items-center gap-3 max-md:gap-3 max-lg:gap-3">
             <button
               class="text-[#8da8a2] hover:text-[#1877F2] cursor-pointer transition-colors">
               <a href="https://www.facebook.com/" target="_blank"
@@ -327,34 +282,30 @@
     </div>
 
     <!-- Hero Section -->
-    <section class="py-10 sm:py-15 md:py-20 px-4 sm:px-10 relative">
+    <section class="py-10 max-sm:py-15 px-4 max-sm:px-0 relative bg-no-repeat bg-center bg-cover" style="background-image: url(src/images/hero-bg.png);">
       <div class="container mx-auto">
         <div class="parallax absolute inset-0"></div>
         <div
-          class="flex flex-col lg:flex-row space-y-0 lg:space-x-10 items-center justify-around px-4 sm:px-5 lg:px-15">
+          class="flex max-lg:flex-col max-md:space-y-8 max-lg:space-x-10 justify-around items-center px-4 sm:px-5 max-lg:px-15">
           <!-- Hero Content -->
           <div
-            class="text-black max-w-150 flex flex-col items-center text-center relative z-10">
-            <h1
-              class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl leading-tight mb-2">
+            class="text-black flex flex-col items-center justify-center text-center z-1 mr-0">
+            <h1 class="text-lg md:text-3xl leading-tight mb-2">
               WHEN AESTHETIC MEET <br />
-              <span class="text-[#8da8a2] xl:text-5xl font-semibold"
+              <span class="text-[#8da8a2] md:text-4xl font-semibold"
                 >STRATEGY</span
               >
             </h1>
-            <h1
-              class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl leading-tight mb-4 sm:mb-6">
+            <h1 class="text-lg md:text-3xl leading-tight mb-4 sm:mb-6">
               PEOPLE CAN'T HELP BUT <br />
-              <span class="text-[#8da8a2] xl:text-5xl font-semibold"
-                >NOTICE</span
-              >
+              <span class="text-[#8da8a2] md:text-4xl font-semibold">NOTICE</span>
             </h1>
-            <p class="text-[14px] max-w-100 mb-8">
+            <p class="text-[14px] max-w-100 mb-6">
               We craft visuals that don’t just look good, they speak, feel, and
               sell.
             </p>
             <button
-              class="bg-[#8da8a2] text-white max-sm:px-4 max-sm:py-2 md:px-8 md:py-4 lg:px-8 lg:py-4 rounded-full font-semibold hover:bg-[#79b0a4] transition-colors cursor-pointer">
+              class="bg-[#8da8a2] text-white max-sm:px-4 max-sm:py-2 max-md:px-6 max-md:py-3 max-lg:px-8 max-lg:py-4 px-8 py-4 rounded-full font-semibold hover:bg-[#79b0a4] transition-colors cursor-pointer">
               <a href="src/pages/contact.html">Book Now</a>
             </button>
           </div>
@@ -364,12 +315,12 @@
             <img
               src="src/images/hero-img-1.png"
               alt="Rangzeb"
-              class="w-120 h-auto" />
+              class="w-110 max-sm:w-full h-auto" />
             <img
               src="src/images/hero-img-2.png"
               alt="Rangzeb"
               id="parallaxImage"
-              class="w-60 top-35 left-15 lg:w-80 h-auto absolute lg:top-45 lg:left-20 z-10" />
+              class="absolute inset-0 mx-auto max-sm:my-23 my-40 max-sm:w-45 w-80 max-lg:w-80 h-auto z-1" />
           </div>
         </div>
       </div>
@@ -395,15 +346,14 @@
           <div
             class="flex flex-col items-center p-4 sm:p-5 md:p-6 group transition-all duration-300">
             <div
-              class="w-16 h-16 sm:w-20 sm:h-20 md:w-32 md:h-32 lg:w-40 lg:h-40 blob2 flex items-center justify-center bg-[#ebeae9] transition-all duration-300 group-hover:bg-[#8da8a2]">
+              class="w-16 h-16 sm:w-20 sm:h-20 md:w-35 md:h-35 lg:w-40 lg:h-40 blob2 flex items-center justify-center bg-[#ebeae9] transition-all duration-300 group-hover:bg-[#8da8a2]">
               <i
                 class="fas fa-share-alt text-[#8da8a2] text-lg sm:text-xl md:text-3xl lg:text-4xl transition-colors duration-300 group-hover:text-white"></i>
             </div>
-            <h3 class="text-sm sm:text-base md:text-lg font-bold my-3 sm:my-4">
+            <h3 class="sm:text-[14px] md:text-[18px] font-bold my-4">
               Social Media Management
             </h3>
-            <p
-              class="text-gray-600 text-xs sm:text-sm md:text-base mb-4 sm:mb-6">
+            <p class="text-gray-600 text-xs sm:text-[12px] md:text-[14px] mb-6">
               Creating and executing tailored strategies to boost your brand's
               online presence.
             </p>
@@ -480,11 +430,10 @@
               <i
                 class="fas fa-heart text-[#8da8a2] text-lg sm:text-xl md:text-3xl lg:text-4xl transition-colors duration-300 group-hover:text-white"></i>
             </div>
-            <h3 class="text-sm sm:text-base md:text-lg font-bold my-3 sm:my-4">
+            <h3 class="sm:text-[14px] md:text-[18px] font-bold my-4">
               Wedding Shoots
             </h3>
-            <p
-              class="text-gray-600 text-xs sm:text-sm md:text-base mb-4 sm:mb-6">
+            <p class="text-gray-600 text-xs sm:text-[12px] md:text-[14px] mb-6">
               Capturing the magic of your special day with cinematic
               storytelling.
             </p>
@@ -511,8 +460,7 @@
             <h3 class="text-sm sm:text-base md:text-lg font-bold my-3 sm:my-4">
               Photoshoots
             </h3>
-            <p
-              class="text-gray-600 text-xs sm:text-sm md:text-base mb-4 sm:mb-6">
+            <p class="text-gray-600 text-xs sm:text-[12px] md:text-[14px] mb-6">
               Product, fashion, lifestyle, and event photography that makes your
               brand shine.
             </p>
@@ -539,8 +487,7 @@
             <h3 class="text-sm sm:text-base md:text-lg font-bold my-3 sm:my-4">
               Product Photography
             </h3>
-            <p
-              class="text-gray-600 text-xs sm:text-sm md:text-base mb-4 sm:mb-6">
+            <p class="text-gray-600 text-xs sm:text-[12px] md:text-[14px] mb-6">
               High-quality, detailed product shots that grab attention.
             </p>
             <a
@@ -629,7 +576,7 @@
               </li>
             </ul>
             <button
-              class="bg-[#8da8a2] text-white max-sm:px-4 max-sm:py-2 md:px-8 md:py-4 lg:px-8 lg:py-4 rounded-full font-semibold hover:bg-[#79b0a4] transition-colors cursor-pointer">
+              class="bg-[#8da8a2] text-white max-sm:px-4 max-sm:py-2 max-md:px-6 max-md:py-3 max-lg:px-8 max-lg:py-4 px-8 py-4 rounded-full font-semibold hover:bg-[#79b0a4] transition-colors cursor-pointer">
               <a href="src/pages/about.html">About Us</a>
             </button>
           </div>
