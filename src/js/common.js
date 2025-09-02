@@ -213,16 +213,27 @@ function initMobileSidebar() {
         // Opening the dropdown
         packagesMenu.classList.remove("hidden");
         packagesMenu.classList.remove("opacity-0", "max-h-0");
-        packagesMenu.classList.add("opacity-100", "max-h-96");
+        packagesMenu.classList.add("opacity-100");
+        packagesMenu.style.height = "0px";
+        packagesMenu.style.overflow = "hidden";
+        
+        // Force a reflow
+        packagesMenu.offsetHeight;
+        
+        packagesMenu.style.height = "200px"; // Set specific height
         if (packagesArrow) {
           packagesArrow.style.transform = "rotate(180deg)";
         }
       } else {
         // Closing the dropdown
-        packagesMenu.classList.remove("opacity-100", "max-h-96");
-        packagesMenu.classList.add("opacity-0", "max-h-0");
+        packagesMenu.classList.remove("opacity-100");
+        packagesMenu.classList.add("opacity-0");
+        packagesMenu.style.height = "0px";
+        
         setTimeout(() => {
           packagesMenu.classList.add("hidden");
+          packagesMenu.style.height = "";
+          packagesMenu.style.overflow = "";
         }, 300);
         if (packagesArrow) {
           packagesArrow.style.transform = "rotate(0deg)";
