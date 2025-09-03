@@ -1,5 +1,8 @@
 module.exports = {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./index.html",
+    "./src/**/*.{html,js,ts,jsx,tsx}",
+  ],
   theme: {
     extend: {
       fontFamily: {
@@ -9,4 +12,4 @@ module.exports = {
     },
   },
   plugins: [],
-}
+};
